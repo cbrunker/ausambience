@@ -1,4 +1,4 @@
-# FastAPI Weather Service
+# AusAmbience Weather Service
 
 A scalable and reliable weather reporting service using the asynchronous FastAPI REST framework. 
 The service fetches weather information for cities and uses Redis for caching results to reduce external API calls 
