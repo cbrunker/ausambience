@@ -56,7 +56,7 @@ You'll need to set environment variables or use a `.env` file for your API keys 
 ```env
 WEATHERSTACK_API_KEY=your_key_here
 OPENWEATHERMAP_API_KEY=your_key_here
-REDIS_URL=redis://localhost:6379/0
+REDIS_URL=redis://127.0.0.1:6379/0
 ```
 
 **Required Environment Variables**
@@ -72,7 +72,7 @@ REDIS_URL=redis://localhost:6379/0
   * Default: `http://api.weatherstack.com/current`
   * **NOTE**: Depending on your subscription, `https` may not be available
 * `REDIS_URL`: protocol and URL for redis connection, **rediss** (TLS) is the recommended connection protocol
-  * Default: `redis://localhost:6379/0`
+  * Default: `redis://127.0.0.1:6379/0`
 * `REDIS_TTL`: number of seconds to cache result data
   * Default: `3`
 * `WEATHER_SERVICE_TIMEOUT`: (Optional) Number of seconds to wait for weather service response
@@ -96,9 +96,9 @@ uvicorn main:app
 
 ## Documentation
 
-Visit `http://localhost:8080/docs` for the interactive Swagger API documentation.
+Visit `http://127.0.0.1:8000/docs` for the interactive Swagger API documentation.
 
-Alternatively, visit `http://localhost:8080/redoc` for the interactive ReDoc documentation interface.
+Alternatively, visit `http://127.0.0.1:8000/redoc` for the interactive ReDoc documentation interface.
 
 
 ## Usage
@@ -106,7 +106,7 @@ Alternatively, visit `http://localhost:8080/redoc` for the interactive ReDoc doc
 To fetch weather data for a city:
 
 ```bash
-curl http://localhost:8080/v1/weather?city=melbourne
+curl http://127.0.0.1:8000/v1/weather?city=melbourne
 ```
 
 Response:
